@@ -10,6 +10,7 @@ CREATE TYPE bookmark_kind AS ENUM ('discuss', 'q&a', 'snippet');
 CREATE TABLE bot_bookmarks (
   id SERIAL PRIMARY KEY,
   userId BIGINT,
+  messageAuthorId BIGINT,
   channelId BIGINT,
   messageId BIGINT,
   content TEXT,
